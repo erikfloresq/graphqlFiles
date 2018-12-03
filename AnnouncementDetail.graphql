@@ -1,0 +1,150 @@
+query AnnouncementDetail($announcementID: Int) {
+    ficha(id: $announcementID) {
+        announcement {
+            id
+            title
+            alias
+            featureSummary
+            important
+            isAgent
+            positionFloor
+            bedroomNumbers
+            bathroomsNumber
+            bedNumber
+            garagesNumber
+            row
+            antique
+            starsNumber
+            roomNumbers
+            placesNumber
+            employeesNumber
+            garageType
+            dorGarageType
+            location
+            propertyState
+            brightness
+            floorNumber
+            floorsToAdd
+            departmentsPerFloor
+            bedroomsPerFloor
+            elevator
+            maintenanceCost
+            commercialUse
+            professionalUse
+            petsAllowed
+            propertyArea
+            builtArea
+            totalArea
+            hectares
+            frontLength
+            backgroundLength
+            firstDayFree
+            lastDayFree
+            announcementDesc
+            departmentId
+            provinceId
+            districtId
+            urbanizationId
+            beachId
+            roadType
+            roadName
+            roadNumber
+            roadReference
+            latitudePosition
+            longitudePosition
+            recordDate
+            releaseDate
+            expireDate
+            subtitle
+            label
+            announcementStatus
+            agentOrder
+            disposition
+            scope
+            propertyUbicated
+            centricDistrict
+        }
+        announcementImage {
+            footName
+        }
+        announcementVideo {
+            routeVideo
+        }
+        announcementCase {
+            id
+            idOp
+            idTypeProperty
+            idSubtypeProperty
+        }
+        announcementPrice {
+            announcementId
+            currency
+            amount
+            type
+            toConsult
+        }
+        announcementFeature {
+            id
+            featureId
+            announcementId
+            type
+            alias
+            name
+            order
+        }
+        announcementAmbient {
+            id
+            name
+            metering
+            announcementId
+        }
+        announcementStore {
+            id
+            businessName
+            tradeName
+            url
+            email
+            phone1
+            phone2
+            cellphone1
+            cellphone2
+            shopDescription
+            logo
+            alias
+            typeId
+            totalValue1
+            totalValue2
+            totalValue3
+            totalValue4
+            totalValue5
+        }
+        announcementExchange {
+            exchange
+            typeExchange
+            createAt
+        }
+        announcementUbigeo {
+            department {
+                name
+                alias
+            }
+            province {
+                name
+                alias
+            }
+            district {
+                name
+                nameMinify
+                alias
+            }
+            urbanization {
+                name
+                alias
+            }
+            beach {
+                name
+                alias
+            }
+        }
+    }
+}

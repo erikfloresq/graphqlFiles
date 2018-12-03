@@ -1,0 +1,97 @@
+query MasterSync {
+    allowedFilters {
+        filter {
+            operationTypeAlias {
+                values {
+                    values
+                    name
+                    valueIndex
+                }
+                index
+            }
+            propertyTypeAlias {
+                values {
+                    values
+                    name
+                    valueIndex
+                    excludedWhen
+                }
+                index
+            }
+            propertySubtypeAlias {
+                values {
+                    values
+                    name
+                    valueIndex
+                    filterRequired
+                }
+                index
+            }
+            bedroomsNumber {
+               values {
+                    name
+                    values
+                    valueIndex
+                    excludedWhen
+               }
+               index
+            }
+            bathroomsNumber {
+               values {
+                    values
+                    valueIndex
+               }
+            }
+            garageNumber {
+               values {
+                    values
+                    valueIndex
+               }
+            }
+            publicationType {
+                values {
+                    values
+                    name
+                    valueIndex
+                }
+            }
+            totalArea {
+                values {
+                    values
+                    name
+                    valueIndex
+                }
+                index
+            }
+            antique {
+                values {
+                    values {
+                        min
+                        max
+                    }
+                    name
+                    valueIndex
+                }
+            }
+            sort {
+                values {
+                    name
+                    value
+                    order
+                }
+            }
+        }
+        version {
+            values {
+                version
+                timestamp
+            }
+        }
+        update {
+            values {
+                version
+                timestamp
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+query SuggestedLocations($text: String, $depId: Int, $provId: Int) {
+    suggest(suggest: $text, filters: { departmentId: $depId, provinceId: $provId }) {
+        results {
+            alias
+            display
+            departmentId
+            provinceId
+            districtId
+        }
+    }
+}

@@ -1,0 +1,28 @@
+mutation Contact($idAnnouncement: Int, $idProject: Int, $idModel: Int, $idUnity: Int, $email: String!, $phone: String!, $name: String, $message: String) {
+contact(fields: {
+                    idAnnouncement: $idAnnouncement,
+                    idProject: $idProject,
+                    idModel: $idModel,
+                    idUnity: $idUnity,
+                    mail: $email,
+                    phone: $phone,
+                    name: $name,
+                    message: $message
+                }
+        )
+{
+    results {
+        contactName
+        schedule
+        contactPhone {
+            whatsapp
+            phone
+        }
+        mail
+    }
+    error {
+        status
+        message
+        }
+    }
+}
