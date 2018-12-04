@@ -1,0 +1,29 @@
+query TotalResult($text: String, $operationTypeAlias: String, $propertyTypeAlias: String, $propertySubtypeAlias: String, $publicationDate: String, $priceAmountPen: String, $bedroomsNumber: Int, $bathroomsNumber: Int, $garageNumber: Int, $priceCurrency: String, $priceAmountMin: Float, $priceAmountMax: Float, $numberPag: Int, $totalAreaMin: Float, $totalAreaMax: Float, $antiqueValueMin: Float, $antiqueValueMax: Float, $publicationType: Int, $departmentAlias: String, $provinceAlias: String, $districAlias: [String], $urbanizationOrBeachAlias: [String], $getListFormat: Boolean) {
+announcement(
+    filters: {
+        title: $text,
+        operationTypeAlias: $operationTypeAlias,
+        propertyTypeAlias: $propertyTypeAlias,
+        propertySubtypeAlias: $propertySubtypeAlias,
+        bedroomsNumber: $bedroomsNumber,
+        bathroomsNumber: $bathroomsNumber,
+        garageNumber: $garageNumber,
+        priceCurrency: $priceCurrency,
+        priceAmount: {min:$priceAmountMin, max:$priceAmountMax},
+        antique: {min: $antiqueValueMin, max: $antiqueValueMax},
+        totalArea: {min: $totalAreaMin, max: $totalAreaMax},
+        publicationType: $publicationType,
+        departmentAlias: $departmentAlias,
+        provinceAlias: $provinceAlias,
+        districtAlias: $districAlias,
+        urbanizationOrBeachAlias: $urbanizationOrBeachAlias
+    },
+    pagination: {page: $numberPag, limit: 10},
+    sort: {publicationDate: $publicationDate, priceAmountPen: $priceAmountPen},
+    origin: {app: $getListFormat}
+) {
+    metadata {
+        resultFound
+        }
+    }
+}
